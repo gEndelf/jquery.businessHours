@@ -8,3 +8,5 @@
 build
 *.iml
 .coverage
+
+node_modules

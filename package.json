@@ -1,0 +1,21 @@
+{
+    "name": "jquery.businessHours",
+    "version": "0.0.1",
+    "title": "jquery.businessHours",
+    "homepage": "http://gendelf.github.io/jquery.businessHours/",
+    "author": {
+        "name": "Alex Padalka",
+        "web": "https://github.com/gEndelf"
+    },
+    "license": "APACHE",
+    "dependencies": {
+        "jquery": ">=1.7",
+        "jt.timepicker": "~1.4.13"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-uglify": "~0.2.2"
+    },
+    "description": "jQuery plugin allows you to easy show & manage business hours",
+    "keywords": ["jQuery", "plugin", "business hours"]
+}

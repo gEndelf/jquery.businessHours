@@ -1,5 +1,5 @@
 {
-    "name": "jquery.businessHours",
+    "name": "jquery.business-hours",
     "main": [ "./jquery.businessHours.min.js", "./jquery.businessHours.js", "./jquery.businessHours.css" ],
     "version": "0.0.1",
     "homepage": "http://gendelf.github.io/jquery.businessHours/",

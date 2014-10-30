@@ -2,15 +2,20 @@
 
 [<img src="http://gendelf.github.io/jquery.businessHours/img/screen2.png" alt="business hours screenshot" />](http://gendelf.github.io/jquery.businessHours/)
 
+[Demo](http://gendelf.github.io/jquery.businessHours/)
+
 ## Requirements
 
 * [jQuery](http://jquery.com/) (>= 1.7)
 * [jQuery timepicker](https://github.com/jonthornton/jquery-timepicker) (1.4.13)
 
+## Bower
+
+```
+bower install -S jquery.business-hours
+```
 
 ## Usage:
-
-[Demo](http://gendelf.github.io/jquery.businessHours/)
 
 ```JavaScript
 

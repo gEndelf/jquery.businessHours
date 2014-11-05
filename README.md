@@ -40,3 +40,5 @@ $(selector).businessHours({
     dayTmpl: " ... template content ..."    // optional
 });
 ```
+
+**Sponsored by**: [MVP engine](http://mvpngn.com)

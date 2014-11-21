@@ -16,6 +16,7 @@
             },
             postInit: function() {
             },
+            inputDisabled: false,
             checkedColorClass: "WorkingDayState",
             uncheckedColorClass: "RestDayState",
             colorBoxValContainerClass: "colorBoxContainer",
@@ -124,7 +125,7 @@
                     checkbox.parents(".colorBox").removeClass(stateClasses.join(' ')).addClass(boxClass);
                     checkbox.parents(".dayContainer").find(".operationTime").toggle(!timeControlDisabled);
                 }).trigger("change");
-
+                if(options.inputDisabled==false)
                 container.find(".colorBox").on("click", function() {
                     var checkbox = $(this).find(".operationState");
                     checkbox.prop("checked", !checkbox.prop('checked')).trigger("change");

@@ -1,5 +1,5 @@
 /**
- jquery.businessHours v1.0.0
+ jquery.businessHours v1.0.1
  https://github.com/gEndelf/jquery.businessHours
 
  requirements:
@@ -39,12 +39,12 @@
             //labelTimeTill: "till:",
             containerTmpl: '<div class="clean"/>',
             dayTmpl: '<div class="dayContainer">' +
-                '<div data-original-title="" class="colorBox"><input type="checkbox" class="invisible operationState"/></div>' +
-                '<div class="weekday"></div>' +
-                '<div class="operationDayTimeContainer">' +
-                '<div class="operationTime"><input type="text" name="startTime" class="mini-time operationTimeFrom" value=""/></div>' +
-                '<div class="operationTime"><input type="text" name="endTime" class="mini-time operationTimeTill" value=""/></div>' +
-                '</div></div>'
+            '<div data-original-title="" class="colorBox"><input type="checkbox" class="invisible operationState"/></div>' +
+            '<div class="weekday"></div>' +
+            '<div class="operationDayTimeContainer">' +
+            '<div class="operationTime"><input type="text" name="startTime" class="mini-time operationTimeFrom" value=""/></div>' +
+            '<div class="operationTime"><input type="text" name="endTime" class="mini-time operationTimeTill" value=""/></div>' +
+            '</div></div>'
         };
 
         var container = $(this);
@@ -125,11 +125,13 @@
                     checkbox.parents(".colorBox").removeClass(stateClasses.join(' ')).addClass(boxClass);
                     checkbox.parents(".dayContainer").find(".operationTime").toggle(!timeControlDisabled);
                 }).trigger("change");
-                if(options.inputDisabled==false)
-                container.find(".colorBox").on("click", function() {
-                    var checkbox = $(this).find(".operationState");
-                    checkbox.prop("checked", !checkbox.prop('checked')).trigger("change");
-                });
+
+                if(!options.inputDisabled) {
+                    container.find(".colorBox").on("click", function() {
+                        var checkbox = $(this).find(".operationState");
+                        checkbox.prop("checked", !checkbox.prop('checked')).trigger("change");
+                    });
+                }
             }
         };
 

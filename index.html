@@ -20,7 +20,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.js" type="text/javascript"></script>
     
-    <script type="text/javascript" src="jquery.businessHours.js"></script>
+    <script type="text/javascript" src="jquery.businessHours.min.js"></script>
     <link rel="stylesheet" type="text/css" href="jquery.businessHours.css"/>
     <link rel="stylesheet" type="text/css" href="libs/page.css"/>
 
@@ -90,9 +90,14 @@
         </div>
         <div>
             <h3>Template customization</h3>
+            <ul>
+                <li><strong>inputDisabled</strong> - disable changing state</li>
+                <li><strong>dayTmpl</strong> - overwrite default template</li>
+            </ul>
             <div class="code">
             <pre><code data-language="javascript">
             $("#businessHoursContainer2").businessHours({
+                inputDisabled: true,
                 checkedColorClass: 'workingBusinssDay',
                 uncheckedColorClass: 'dayOff',
                 dayTmpl: '<div class="dayContainer">' +
@@ -169,6 +174,7 @@
 
             var businessHoursManager2 = $("#businessHoursContainer2").businessHours({
                 checkedColorClass: "workingBusinssDay",
+                inputDisabled: true,
                 uncheckedColorClass: "dayOff",
                 dayTmpl: '<div class="dayContainer">' +
                         '<div data-original-title="" class="colorBox"><input type="checkbox" class="invisible operationState"/></div>' +

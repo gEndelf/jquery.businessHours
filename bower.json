@@ -1,7 +1,7 @@
 {
     "name": "jquery.business-hours",
     "main": [ "./jquery.businessHours.min.js", "./jquery.businessHours.js", "./jquery.businessHours.css" ],
-    "version": "0.0.1",
+    "version": "1.0.1",
     "homepage": "http://gendelf.github.io/jquery.businessHours/",
     "author": {
         "name": "Alex Padalka",

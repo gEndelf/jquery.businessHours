@@ -48,6 +48,15 @@
         };
 
         var container = $(this);
+
+        function initTimeBox(timeBoxSelector, time, isInputDisabled) {
+            timeBoxSelector.val(time);
+
+            if(isInputDisabled) {
+                timeBoxSelector.prop('readonly', true);
+            }
+        }
+
         var methods = {
             getValueOrDefault: function(val, defaultVal) {
                 return (jQuery.type(val) === "undefined" || val == null) ? defaultVal : val;
@@ -105,10 +114,10 @@
                     operationDayNode.find('.operationState').prop('checked', isWorkingDay);
 
                     var timeFrom = $this.getValueOrDefault(day.timeFrom, options.defaultOperationTimeFrom);
-                    operationDayNode.find('[name="startTime"]').val(timeFrom);
+                    initTimeBox(operationDayNode.find('[name="startTime"]'), timeFrom, options.inputDisabled);
 
                     var endTime = $this.getValueOrDefault(day.timeTill, options.defaultOperationTimeTill);
-                    operationDayNode.find('[name="endTime"]').val(endTime);
+                    initTimeBox(operationDayNode.find('[name="endTime"]'), endTime, options.inputDisabled);
                 });
 
                 container.find(".operationState").change(function() {
